@@ -1,13 +1,23 @@
 import 'package:dansk_app/prepare_practice.dart';
 import 'package:flutter/material.dart';
-
+/*
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MaterialApp(
+    title: 'Navigation Basics',
+    home: FirstRoute(),
+  ));
+}
+ */
+void main() {
+  runApp(const MaterialApp(
+    home: MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +47,12 @@ class MyApp extends StatelessWidget {
                   ),
                   minimumSize: const Size(300, 36),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const PreparePractice(subject: 'nutidsr')),
+                  );
+                  },
                 child: const Text('Nutids-R ?',
                   style: TextStyle(
                     color: Colors.white,
@@ -52,7 +67,12 @@ class MyApp extends StatelessWidget {
                     ),
                     minimumSize: const Size(300, 36),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const PreparePractice(subject: 'dobbeltk')),
+                    );
+                  },
                   child: const Text('Dobbeltkonsonant ?',
                     style: TextStyle(
                       color: Colors.white,
@@ -67,7 +87,12 @@ class MyApp extends StatelessWidget {
                     ),
                     minimumSize: const Size(300, 36),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const PreparePractice(subject: 'stumme')),
+                    );
+                  },
                   child: const Text('Stumme bogstaver ?',
                     style: TextStyle(
                       color: Colors.white,
@@ -82,7 +107,12 @@ class MyApp extends StatelessWidget {
                     ),
                     minimumSize: const Size(300, 36),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const PreparePractice(subject: 'etellerto')),
+                    );
+                  },
                   child: const Text('Et eller to ord ?',
                     style: TextStyle(
                       color: Colors.white,
@@ -97,7 +127,12 @@ class MyApp extends StatelessWidget {
                     ),
                     minimumSize: const Size(300, 36),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const PreparePractice(subject: 'ligge')),
+                    );
+                  },
                   child: const Text('Ligge eller lægge ?',
                     style: TextStyle(
                       color: Colors.white,
@@ -112,7 +147,12 @@ class MyApp extends StatelessWidget {
                     ),
                     minimumSize: const Size(300, 36),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const PreparePractice(subject: 'eneende')),
+                    );
+                  },
                   child: const Text('-ene eller -ende ?',
                     style: TextStyle(
                       color: Colors.white,
@@ -127,7 +167,12 @@ class MyApp extends StatelessWidget {
                     ),
                     minimumSize: const Size(300, 36),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const PreparePractice(subject: 'adaf')),
+                    );
+                  },
                   child: const Text('Ad eller af ?',
                     style: TextStyle(
                       color: Colors.white,
@@ -135,14 +180,6 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                 ),
-              /*
-                SubjectButton(text: 'Med eller uden R ?', subject: 'medellerudenr',),
-                SubjectButton(text: 'Dobbeltkonsonant ?', subject: 'dobbeltkonsonant',),
-                SubjectButton(text: 'Stumme bogstaver ?', subject: 'stummebogstaver',),
-                SubjectButton(text: 'Et eller to ord ?', subject: 'etellertoord',),
-                SubjectButton(text: 'Ligge eller lægge ?', subject: 'ligge',),
-                SubjectButton(text: '-ene eller -ende ?', subject: 'eneende',),
-                SubjectButton(text: 'Ad eller af ?', subject: 'adelleraf',), */
               ],
             ),
             Image.asset(
@@ -155,11 +192,4 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
-}
-
-Type getSubject() {
-
-
-
-  return Widget;
 }
