@@ -28,6 +28,7 @@ class _SubjectScreenState extends State<SubjectScreen> {
   String option1 = '';
   String option2 = '';
   String correctAnswer = '';
+  String nextButtonText = 'Næste...';
 
   List<String> strings = [];
   List<String> pairs = [];
