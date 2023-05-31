@@ -1,10 +1,10 @@
-const nutidsrArray = [
+const dobbeltkonsonantArray = [
   // 10 jeg sætninger
-  'Hun tænker meget.', 'Hun tænke meget.',
-  'Jeg spiser en is.', 'Jeg spise en is.',
-  'Vi synger en sang.', 'Vi synge en sang.',
-  'Jeg holder en fest.', 'Jeg holde en fest.',
-  'Han cykler en tur.', 'Han cykle en tur.',
+  'Solen skinner.', 'Solen skiner.',
+  'De er forskellige.', 'De er forskelige.',
+  'Han er meget fattig.', 'Han er meget fatig.',
+  'Der er huller i skoen.', 'Der er huler i skoen.',
+  'Han ville hjem.', 'Han vile hjem.',
   'Jeg falder i søvn.', 'Jeg falde i søvn.',
   'Hun scorer et mål.', 'Hun score et mål.',
   'Vi sidder ved bordet.', 'Vi sidde ved bordet.',

@@ -18,11 +18,10 @@ class SubjectScreen extends StatefulWidget {
 }
 
 class _SubjectScreenState extends State<SubjectScreen> {
-
   int yes = 0;
   int no = 0;
-  int questNum = 0; // number of strings read. 2 per quiz
-  int quizNum = 0; // number of quizzes taken
+  int questNum = 0; // number of strings read.
+  int quizNum = 0;  // number of quizzes taken
 
   bool _justAnswered = false;
   bool _set1Green = false;
@@ -38,9 +37,9 @@ class _SubjectScreenState extends State<SubjectScreen> {
   List<String> strings = []; // array with the desired number of quizzes
   List<String> pairs = []; //
 
-  List<String> _getArray(int q) {
+  List<String> _getSelectedArray(int num) {
     strings.clear();
-    for (int i = q; i < q + 2; i++) {
+    for (int i = num; i < num + 2; i++) {
       strings.add(widget.questions[i]);
     }
     return strings;
@@ -48,19 +47,20 @@ class _SubjectScreenState extends State<SubjectScreen> {
 
   void _getQuizStrings(int num) {
     setState(() {
-      _set1Green = false;
-      _set2Green = false;
-      pairs = _getArray(questNum);
-      correctAnswer = pairs[0];
-      pairs.shuffle();
-      option1 = pairs[0];
-      option2 = pairs[1];
-      questNum += 2;
-      quizNum++;
       if (quizNum == widget.numQuestions) {
         _noMoreQuizzes();
+      } else {
+        _set1Green = false;
+        _set2Green = false;
+        pairs = _getSelectedArray(questNum);
+        correctAnswer = pairs[0];
+        pairs.shuffle();
+        option1 = pairs[0];
+        option2 = pairs[1];
+        quizNum++;
+        questNum += 2;
+        _justAnswered = false;
       }
-      _justAnswered = false;
     });
   }
 
@@ -92,9 +92,11 @@ class _SubjectScreenState extends State<SubjectScreen> {
     });
   }
 
+
   @override
   void initState() {
-    _getQuizStrings(questNum);
+    strings = _getSelectedArray(widget.numQuestions);
+    _getQuizStrings(quizNum);
     super.initState();
   }
 
@@ -179,7 +181,7 @@ class _SubjectScreenState extends State<SubjectScreen> {
                 const SizedBox(height: 20),
                 ElevatedButton.icon(
                   onPressed: () {
-                    _justAnswered ? _getQuizStrings(questNum): null;
+                    _justAnswered ? _getQuizStrings(quizNum) : null;
                   },
                   icon: const Icon(
                     Icons.keyboard_double_arrow_right,
