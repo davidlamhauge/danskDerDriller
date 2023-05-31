@@ -43,8 +43,9 @@ class _PreparePracticeState extends State<PreparePractice> {
     return txt;
   }
 
+  late List<String> liste;
+
   List<String> _getList() {
-    List<String> liste;
     switch (widget.subject) {
       case 'nutidsr':
         liste = nutidsrArray;
@@ -86,7 +87,7 @@ class _PreparePracticeState extends State<PreparePractice> {
                 OutlinedButton(
                     onPressed: () {}, child: const Text('20 opgaver')),
                 OutlinedButton(
-                    onPressed: () {}, child: Text('${opgaver.length} opgaver')),
+                    onPressed: () {}, child: Text('${opgaver.length ~/ 2} opgaver')),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.pop(context);
