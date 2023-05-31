@@ -22,7 +22,7 @@ class _SubjectScreenState extends State<SubjectScreen> {
   int yes = 0;
   int no = 0;
   int questNum = 0; // number of strings read. 2 per quiz
-  int quizNum = 0;  // number of quizzes taken
+  int quizNum = 0; // number of quizzes taken
 
   bool _justAnswered = false;
   bool _set1Green = false;
@@ -35,9 +35,8 @@ class _SubjectScreenState extends State<SubjectScreen> {
   String correctAnswer = '';
   String nextButtonText = 'Næste...';
 
-  List<String> strings = [];  // array with the desired number of quizzes
-  List<String> pairs = [];    //
-
+  List<String> strings = []; // array with the desired number of quizzes
+  List<String> pairs = []; //
 
   List<String> _getArray(int q) {
     strings.clear();
@@ -58,6 +57,10 @@ class _SubjectScreenState extends State<SubjectScreen> {
       option2 = pairs[1];
       questNum += 2;
       quizNum++;
+      if (quizNum == widget.numQuestions) {
+        _noMoreQuizzes();
+      }
+      _justAnswered = false;
     });
   }
 
@@ -65,25 +68,35 @@ class _SubjectScreenState extends State<SubjectScreen> {
     setState(() {
       if (txt == correctAnswer) {
         yes++;
-        if (option == 1) { _set1Green = true; }
-        else { _set2Green = true; }
-      }
-      else
-      {
+        if (option == 1) {
+          _set1Green = true;
+        } else {
+          _set2Green = true;
+        }
+      } else {
         no++;
-        if (option == 1) { _set2Green = true; }
-        else { _set1Green = true; }
+        if (option == 1) {
+          _set2Green = true;
+        } else {
+          _set1Green = true;
+        }
       }
+      _justAnswered = true;
+    });
+  }
+
+  void _noMoreQuizzes() {
+    setState(() {
+      nextButtonText = 'AFSLUT (pil øverst)';
+      _justAnswered = false;
     });
   }
 
   @override
-
   void initState() {
     _getQuizStrings(questNum);
     super.initState();
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -124,43 +137,39 @@ class _SubjectScreenState extends State<SubjectScreen> {
               ],
             ),
             const SizedBox(height: 20),
-            /*
-                    child: ElevatedButton(
-          onPressed: () => setState(() => _flag = !_flag),
-          child: Text(_flag ? 'Red' : 'Green'),
-          style: ElevatedButton.styleFrom(
-            backgroundColor: _flag ? Colors.red : Colors.teal, // This is what you need!
-
-             */
             Column(
               children: [
                 TextButton(
                   onPressed: () {
-                    _updateScore(option1, 1);
+                    _justAnswered ? null : _updateScore(option1, 1);
                   },
                   style: TextButton.styleFrom(
                     minimumSize: const Size.fromHeight(30),
-                    backgroundColor: _set1Green ? Colors.green : quizButtonColor,
+                    backgroundColor:
+                        _set1Green ? Colors.green : quizButtonColor,
                     foregroundColor: Colors.black,
                   ),
-                  child: Text(option1,
-                  style: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                  ),
+                  child: Text(
+                    option1,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
                   ),
                 ),
                 const SizedBox(height: 20),
                 TextButton(
                   onPressed: () {
-                    _updateScore(option2, 2);
+                    _justAnswered ? null : _updateScore(option2, 2);
                   },
                   style: TextButton.styleFrom(
                     minimumSize: const Size.fromHeight(30),
-                    backgroundColor: _set2Green ? Colors.green : quizButtonColor,
+                    backgroundColor:
+                        _set2Green ? Colors.green : quizButtonColor,
                     foregroundColor: Colors.black,
                   ),
-                  child:  Text(option2,
+                  child: Text(
+                    option2,
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 18,
@@ -169,19 +178,19 @@ class _SubjectScreenState extends State<SubjectScreen> {
                 ),
                 const SizedBox(height: 20),
                 ElevatedButton.icon(
-                    onPressed: () {
-                      _getQuizStrings(questNum);
-                    },
-                    icon: const Icon(
-                      Icons.keyboard_double_arrow_right,
+                  onPressed: () {
+                    _justAnswered ? _getQuizStrings(questNum): null;
+                  },
+                  icon: const Icon(
+                    Icons.keyboard_double_arrow_right,
+                  ),
+                  label: Text(
+                    nextButtonText,
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
                     ),
-                    label: const Text(
-                        'Næste...',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
+                  ),
                 ),
               ],
             ),
