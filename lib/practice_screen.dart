@@ -24,6 +24,7 @@ class _SubjectScreenState extends State<SubjectScreen> {
   int quizNum = 0;  // number of quizzes taken
 
   bool _justAnswered = false;
+  bool _showNextButton = true;
   bool _set1Green = false;
   bool _set2Green = false;
 
@@ -81,6 +82,9 @@ class _SubjectScreenState extends State<SubjectScreen> {
           _set1Green = true;
         }
       }
+      if (quizNum == widget.numQuestions) {
+        _showNextButton = false;
+      }
       _justAnswered = true;
     });
   }
@@ -88,6 +92,7 @@ class _SubjectScreenState extends State<SubjectScreen> {
   void _noMoreQuizzes() {
     setState(() {
       nextButtonText = 'AFSLUT (pil øverst)';
+//      _showNextButton = false;
       _justAnswered = false;
     });
   }
@@ -179,9 +184,31 @@ class _SubjectScreenState extends State<SubjectScreen> {
                   ),
                 ),
                 const SizedBox(height: 20),
+                /*
+                             !_canShowButton
+                  ? const SizedBox.shrink()
+                  : RaisedButton(
+                      child: Text('Login'),
+                      textColor: Colors.white,
+                      elevation: 7.0,
+                      color: Colors.blue,
+                      onPressed: () {
+                        hideWidget();
+                        //_number();
+                      },
+                 */
+                !_showNextButton ?
+                Text(
+                  'Resultat: $yes ud af ${widget.numQuestions}',
+                  style: const TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.purple,
+                  ),
+                ):
                 ElevatedButton.icon(
                   onPressed: () {
-                    _justAnswered ? _getQuizStrings(quizNum) : null;
+                      _justAnswered ? _getQuizStrings(quizNum) : null;
                   },
                   icon: const Icon(
                     Icons.keyboard_double_arrow_right,
