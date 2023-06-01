@@ -84,7 +84,7 @@ class _PreparePracticeState extends State<PreparePractice> {
                             builder: (context) => SubjectScreen(
                                 subject: _getSubject(),
                                 questions: liste,
-                                numQuestions: liste.length ~/ 2,
+                                numQuestions: liste.length,
                             ),
                           ));
 
