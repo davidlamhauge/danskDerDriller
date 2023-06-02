@@ -220,7 +220,7 @@ class _SubjectScreenState extends State<SubjectScreen> {
                         Navigator.of(context).pop(); // , ModalRoute.withName(MyApp));
                       },
                       icon: const Icon(
-                        Icons.keyboard_double_arrow_right,
+                        Icons.keyboard_arrow_left,
                       ),
                       label: const Text(
                         'En gang til...',
@@ -235,7 +235,7 @@ class _SubjectScreenState extends State<SubjectScreen> {
                         Navigator.of(context)..pop()..pop(); // , ModalRoute.withName(MyApp));
                       },
                       icon: const Icon(
-                        Icons.keyboard_double_arrow_right,
+                        Icons.keyboard_double_arrow_left,
                       ),
                       label: const Text(
                         'Til forsiden',
