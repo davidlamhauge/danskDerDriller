@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 
 class SubjectScreen extends StatefulWidget {
-  const SubjectScreen(
-      {super.key,
-      required this.subject,
-      required this.questions,
-      required this.numQuestions});
+  const SubjectScreen({super.key,
+    required this.subject,
+    required this.questions,
+    required this.numQuestions});
 
   final String subject;
   final List<String> questions;
@@ -50,13 +49,10 @@ class _SubjectScreenState extends State<SubjectScreen> {
       }
     }
     quizArray.shuffle();
-    print('Quiz array');
-    print(quizArray);
     return quizArray;
   }
 
   List<String> _getSelectedArray(int num) {
-    print('array size: ${quizArray.length}');
     pairs.clear();
     pairs = quizArray[num];
     return pairs;
@@ -70,14 +66,11 @@ class _SubjectScreenState extends State<SubjectScreen> {
         _set1Green = false;
         _set2Green = false;
         pairs = _getSelectedArray(quizNum);
-        print(pairs[0]);
-        print(pairs[1]);
         correctAnswer = pairs[0];
         pairs.shuffle();
         option1 = pairs[0];
         option2 = pairs[1];
         quizNum++;
-        print('quiznum: $quizNum');
         _justAnswered = false;
       }
     });
@@ -170,7 +163,7 @@ class _SubjectScreenState extends State<SubjectScreen> {
                   style: TextButton.styleFrom(
                     minimumSize: const Size.fromHeight(30),
                     backgroundColor:
-                        _set1Green ? Colors.green : quizButtonColor,
+                    _set1Green ? Colors.green : quizButtonColor,
                     foregroundColor: Colors.black,
                   ),
                   child: Text(
@@ -189,7 +182,7 @@ class _SubjectScreenState extends State<SubjectScreen> {
                   style: TextButton.styleFrom(
                     minimumSize: const Size.fromHeight(30),
                     backgroundColor:
-                        _set2Green ? Colors.green : quizButtonColor,
+                    _set2Green ? Colors.green : quizButtonColor,
                     foregroundColor: Colors.black,
                   ),
                   child: Text(
@@ -202,6 +195,7 @@ class _SubjectScreenState extends State<SubjectScreen> {
                 ),
                 const SizedBox(height: 20),
                 !_showNextButton
+                /*
                     ? Text(
                         'Resultat: $yes ud af ${widget.numQuestions}',
                         style: const TextStyle(
@@ -210,21 +204,64 @@ class _SubjectScreenState extends State<SubjectScreen> {
                           color: Colors.purple,
                         ),
                       )
-                    : ElevatedButton.icon(
-                        onPressed: () {
-                          _justAnswered ? _getQuizStrings(quizNum) : null;
-                        },
-                        icon: const Icon(
-                          Icons.keyboard_double_arrow_right,
-                        ),
-                        label: Text(
-                          nextButtonText,
-                          style: const TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                          ),
+                */
+                    ? Column(
+                  children: [
+                    Text(
+                      'Resultat: $yes ud af ${widget.numQuestions}',
+                      style: const TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.purple,
+                      ),
+                    ),
+                    ElevatedButton.icon(
+                      onPressed: () {
+                        Navigator.of(context).pop(); // , ModalRoute.withName(MyApp));
+                      },
+                      icon: const Icon(
+                        Icons.keyboard_double_arrow_right,
+                      ),
+                      label: const Text(
+                        'En gang til...',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
+                    ),
+                    ElevatedButton.icon(
+                      onPressed: () {
+                        Navigator.of(context)..pop()..pop(); // , ModalRoute.withName(MyApp));
+                      },
+                      icon: const Icon(
+                        Icons.keyboard_double_arrow_right,
+                      ),
+                      label: const Text(
+                        'Til forsiden',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                )
+                    : ElevatedButton.icon(
+                  onPressed: () {
+                    _justAnswered ? _getQuizStrings(quizNum) : null;
+                  },
+                  icon: const Icon(
+                    Icons.keyboard_double_arrow_right,
+                  ),
+                  label: Text(
+                    nextButtonText,
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
               ],
             ),
             const Spacer(),
