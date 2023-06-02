@@ -35,29 +35,49 @@ class _SubjectScreenState extends State<SubjectScreen> {
 
   List<String> strings = []; // array with the desired number of quizzes
   List<String> pairs = []; //
+  List<List<String>> quizArray = [];
+
+  List<List<String>> _getFinalArray(int num) {
+    strings.clear();
+    for (int i = 0; i < widget.questions.length ~/ 2; i++) {
+      for (int j = 0; j < 2; j++) {
+        if (j == 0) {
+          option1 = widget.questions[j + i * 2];
+        } else if (j == 1) {
+          option2 = widget.questions[j + i * 2];
+          quizArray.add([option1, option2]);
+        }
+      }
+    }
+    quizArray.shuffle();
+    print('Quiz array');
+    print(quizArray);
+    return quizArray;
+  }
 
   List<String> _getSelectedArray(int num) {
-    strings.clear();
-    for (int i = num; i < num + 2; i++) {
-      strings.add(widget.questions[i]);
-    }
-    return strings;
+    print('array size: ${quizArray.length}');
+    pairs.clear();
+    pairs = quizArray[num];
+    return pairs;
   }
 
   void _getQuizStrings(int num) {
     setState(() {
-      if (quizNum == widget.numQuestions) {
+      if (quizNum >= widget.numQuestions) {
         _noMoreQuizzes();
       } else {
         _set1Green = false;
         _set2Green = false;
-        pairs = _getSelectedArray(questNum);
+        pairs = _getSelectedArray(quizNum);
+        print(pairs[0]);
+        print(pairs[1]);
         correctAnswer = pairs[0];
         pairs.shuffle();
         option1 = pairs[0];
         option2 = pairs[1];
         quizNum++;
-        questNum += 2;
+        print('quiznum: $quizNum');
         _justAnswered = false;
       }
     });
@@ -90,15 +110,14 @@ class _SubjectScreenState extends State<SubjectScreen> {
   void _noMoreQuizzes() {
     setState(() {
       nextButtonText = 'AFSLUT (pil øverst)';
-//      _showNextButton = false;
+      _showNextButton = false;
       _justAnswered = false;
     });
   }
 
   @override
   void initState() {
-    strings = _getSelectedArray(widget.numQuestions);
-    pairs = _getSelectedArray(questNum);
+    quizArray = _getFinalArray(widget.numQuestions);
     _getQuizStrings(quizNum);
     super.initState();
   }
@@ -184,7 +203,7 @@ class _SubjectScreenState extends State<SubjectScreen> {
                 const SizedBox(height: 20),
                 !_showNextButton
                     ? Text(
-                        '$yes ud af ${widget.numQuestions} rigtige',
+                        'Resultat: $yes ud af ${widget.numQuestions}',
                         style: const TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
