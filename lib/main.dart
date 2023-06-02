@@ -180,6 +180,26 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                 ),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(24),
+                    ),
+                    minimumSize: const Size(300, 36),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const PreparePractice(subject: 'nogen')),
+                    );
+                  },
+                  child: const Text('Nogen eller nogle ?',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
               ],
             ),
             Image.asset(

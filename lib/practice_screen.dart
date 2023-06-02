@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 
 class SubjectScreen extends StatefulWidget {
@@ -21,7 +19,7 @@ class _SubjectScreenState extends State<SubjectScreen> {
   int yes = 0;
   int no = 0;
   int questNum = 0; // number of strings read.
-  int quizNum = 0;  // number of quizzes taken
+  int quizNum = 0; // number of quizzes taken
 
   bool _justAnswered = false;
   bool _showNextButton = true;
@@ -97,10 +95,10 @@ class _SubjectScreenState extends State<SubjectScreen> {
     });
   }
 
-
   @override
   void initState() {
     strings = _getSelectedArray(widget.numQuestions);
+    pairs = _getSelectedArray(questNum);
     _getQuizStrings(quizNum);
     super.initState();
   }
@@ -184,43 +182,30 @@ class _SubjectScreenState extends State<SubjectScreen> {
                   ),
                 ),
                 const SizedBox(height: 20),
-                /*
-                             !_canShowButton
-                  ? const SizedBox.shrink()
-                  : RaisedButton(
-                      child: Text('Login'),
-                      textColor: Colors.white,
-                      elevation: 7.0,
-                      color: Colors.blue,
-                      onPressed: () {
-                        hideWidget();
-                        //_number();
-                      },
-                 */
-                !_showNextButton ?
-                Text(
-                  'Resultat: $yes ud af ${widget.numQuestions}',
-                  style: const TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.purple,
-                  ),
-                ):
-                ElevatedButton.icon(
-                  onPressed: () {
-                      _justAnswered ? _getQuizStrings(quizNum) : null;
-                  },
-                  icon: const Icon(
-                    Icons.keyboard_double_arrow_right,
-                  ),
-                  label: Text(
-                    nextButtonText,
-                    style: const TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
+                !_showNextButton
+                    ? Text(
+                        '$yes ud af ${widget.numQuestions} rigtige',
+                        style: const TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.purple,
+                        ),
+                      )
+                    : ElevatedButton.icon(
+                        onPressed: () {
+                          _justAnswered ? _getQuizStrings(quizNum) : null;
+                        },
+                        icon: const Icon(
+                          Icons.keyboard_double_arrow_right,
+                        ),
+                        label: Text(
+                          nextButtonText,
+                          style: const TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
               ],
             ),
             const Spacer(),
