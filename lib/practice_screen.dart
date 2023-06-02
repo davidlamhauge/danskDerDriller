@@ -120,6 +120,7 @@ class _SubjectScreenState extends State<SubjectScreen> {
   @override
   void initState() {
     quizArray = _getFinalArray(widget.numQuestions);
+    _getQuizStrings(quizNum);
     super.initState();
   }
 
