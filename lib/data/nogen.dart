@@ -17,7 +17,7 @@ const nogenNogleArray = [
   'Det var nogle hårde dage.', 'Det var nogen hårde dage.',
   'Jeg så nogle egern.', 'Jeg så nogen egern.',
   'Der var ikke nogen dyr.', 'Der var ikke nogle dyr.',
-  'Der sad ikke nogen ved bordet.', 'Der sad ikke nogen ved bordet.',
+  'Der sad ikke nogen ved bordet.', 'Der sad ikke nogle ved bordet.',
   'Jeg fik nogle oplevelser.', 'Jeg fik nogen oplevelser.',
   'Jeg spiser nogle piller.', 'Jeg spiser nogen piller.',
   'Jeg kender nogle musikere.', 'Jeg kender nogen musikere.',

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
 class SubjectScreen extends StatefulWidget {
-  const SubjectScreen({super.key,
-    required this.subject,
-    required this.questions,
-    required this.numQuestions});
+  const SubjectScreen(
+      {super.key,
+      required this.subject,
+      required this.questions,
+      required this.numQuestions});
 
   final String subject;
   final List<String> questions;
@@ -35,6 +36,7 @@ class _SubjectScreenState extends State<SubjectScreen> {
   List<String> strings = []; // array with the desired number of quizzes
   List<String> pairs = []; //
   List<List<String>> quizArray = [];
+  List<String> wrongAnswers = [];
 
   List<List<String>> _getFinalArray(int num) {
     strings.clear();
@@ -86,6 +88,7 @@ class _SubjectScreenState extends State<SubjectScreen> {
           _set2Green = true;
         }
       } else {
+        wrongAnswers.add(txt);
         no++;
         if (option == 1) {
           _set2Green = true;
@@ -163,7 +166,7 @@ class _SubjectScreenState extends State<SubjectScreen> {
                   style: TextButton.styleFrom(
                     minimumSize: const Size.fromHeight(30),
                     backgroundColor:
-                    _set1Green ? Colors.green : quizButtonColor,
+                        _set1Green ? Colors.green : quizButtonColor,
                     foregroundColor: Colors.black,
                   ),
                   child: Text(
@@ -182,7 +185,7 @@ class _SubjectScreenState extends State<SubjectScreen> {
                   style: TextButton.styleFrom(
                     minimumSize: const Size.fromHeight(30),
                     backgroundColor:
-                    _set2Green ? Colors.green : quizButtonColor,
+                        _set2Green ? Colors.green : quizButtonColor,
                     foregroundColor: Colors.black,
                   ),
                   child: Text(
@@ -195,73 +198,72 @@ class _SubjectScreenState extends State<SubjectScreen> {
                 ),
                 const SizedBox(height: 20),
                 !_showNextButton
-                /*
-                    ? Text(
-                        'Resultat: $yes ud af ${widget.numQuestions}',
-                        style: const TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.purple,
-                        ),
-                      )
-                */
                     ? Column(
-                  children: [
-                    Text(
-                      'Resultat: $yes ud af ${widget.numQuestions}',
-                      style: const TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.purple,
-                      ),
-                    ),
-                    ElevatedButton.icon(
-                      onPressed: () {
-                        Navigator.of(context).pop(); // , ModalRoute.withName(MyApp));
-                      },
-                      icon: const Icon(
-                        Icons.keyboard_arrow_left,
-                      ),
-                      label: const Text(
-                        'En gang til...',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    ElevatedButton.icon(
-                      onPressed: () {
-                        Navigator.of(context)..pop()..pop(); // , ModalRoute.withName(MyApp));
-                      },
-                      icon: const Icon(
-                        Icons.keyboard_double_arrow_left,
-                      ),
-                      label: const Text(
-                        'Til forsiden',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ],
-                )
+                        children: [
+                          Text(
+                            'Resultat: $yes ud af ${widget.numQuestions}',
+                            style: const TextStyle(
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.purple,
+                            ),
+                          ),
+                          const SizedBox(height: 10),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              ElevatedButton.icon(
+                                onPressed: () {
+                                  Navigator.of(context)
+                                      .pop(); // , ModalRoute.withName(MyApp));
+                                },
+                                icon: const Icon(
+                                  Icons.keyboard_arrow_left,
+                                ),
+                                label: const Text(
+                                  'En gang til...',
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              ElevatedButton.icon(
+                                onPressed: () {
+                                  Navigator.of(context)
+                                    ..pop()
+                                    ..pop(); // , ModalRoute.withName(MyApp));
+                                },
+                                icon: const Icon(
+                                  Icons.keyboard_double_arrow_left,
+                                ),
+                                label: const Text(
+                                  'Til forsiden',
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      )
                     : ElevatedButton.icon(
-                  onPressed: () {
-                    _justAnswered ? _getQuizStrings(quizNum) : null;
-                  },
-                  icon: const Icon(
-                    Icons.keyboard_double_arrow_right,
-                  ),
-                  label: Text(
-                    nextButtonText,
-                    style: const TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
+                        onPressed: () {
+                          _justAnswered ? _getQuizStrings(quizNum) : null;
+                        },
+                        icon: const Icon(
+                          Icons.keyboard_double_arrow_right,
+                        ),
+                        label: Text(
+                          nextButtonText,
+                          style: const TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
               ],
             ),
             const Spacer(),
