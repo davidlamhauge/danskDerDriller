@@ -1,3 +1,4 @@
+import 'package:dansk_app/data/ligge.dart';
 import 'package:flutter/material.dart';
 import 'package:dansk_app/practice_screen.dart';
 
@@ -5,6 +6,7 @@ import 'package:dansk_app/data/nutidsr.dart';
 import 'package:dansk_app/data/dobbeltk.dart';
 import 'package:dansk_app/data/nogen.dart';
 import 'package:dansk_app/data/stumme.dart';
+import 'package:dansk_app/data/ad_af.dart';
 
 class PreparePractice extends StatefulWidget {
   const PreparePractice({Key? key, required this.subject}) : super(key: key);
@@ -39,6 +41,8 @@ class _PreparePracticeState extends State<PreparePractice> {
       case 'dobbeltk' : liste = dobbeltkonsonantArray; break;
       case 'nogen'    : liste = nogenNogleArray; break;
       case 'stumme'   : liste = stummeArray; break;
+      case 'adaf'     : liste = adAfArray; break;
+      case 'ligge'    : liste = liggeArray; break;
       default         : liste = nutidsrArray; break;
     }
     return liste;

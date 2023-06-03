@@ -7,7 +7,7 @@ const nogenNogleArray = [
   'Der var ikke nogen der sov.', 'Der var ikke nogle der sov.',
   'Vi skulle samle nogle nødder.', 'Vi skulle samle nogen nødder.',
   'Hun tog nogle billeder.', 'Hun tog nogen billeder.',
-  'Der er nogle i stuen.', 'Der er nogen i stuen.',
+  'Der er nogle folk i stuen.', 'Der er nogen folk i stuen.',
   'Der er ikke nogen i stuen.', 'Der er ikke nogle i stuen.',
   'Nogle fra klassen mødes.', 'Nogen fra klassen mødes.',
   // 10 at sætninger

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:dansk_app/wrong_answers.dart';
 
 class SubjectScreen extends StatefulWidget {
   const SubjectScreen(
@@ -25,6 +26,7 @@ class _SubjectScreenState extends State<SubjectScreen> {
   bool _showNextButton = true;
   bool _set1Green = false;
   bool _set2Green = false;
+  bool _wrongAnswers = false;
 
   Color? quizButtonColor = Colors.lightBlue[100];
 
@@ -88,7 +90,8 @@ class _SubjectScreenState extends State<SubjectScreen> {
           _set2Green = true;
         }
       } else {
-        wrongAnswers.add(txt);
+        wrongAnswers.add('- $txt\n[$correctAnswer]\n');
+        _wrongAnswers = true;
         no++;
         if (option == 1) {
           _set2Green = true;
@@ -113,6 +116,7 @@ class _SubjectScreenState extends State<SubjectScreen> {
 
   @override
   void initState() {
+    wrongAnswers.clear();
     quizArray = _getFinalArray(widget.numQuestions);
     _getQuizStrings(quizNum);
     super.initState();
@@ -208,6 +212,17 @@ class _SubjectScreenState extends State<SubjectScreen> {
                               color: Colors.purple,
                             ),
                           ),
+                          const SizedBox(height: 10),
+                          _wrongAnswers
+                              ? Container(
+                                  color: Colors.green[100],
+                                  height: 80,
+                                  alignment: Alignment.center,
+                                  child: SingleChildScrollView(
+                                      child:
+                                          WrongAnswers(strings: wrongAnswers)),
+                                )
+                              : const SizedBox(height: 10),
                           const SizedBox(height: 10),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,

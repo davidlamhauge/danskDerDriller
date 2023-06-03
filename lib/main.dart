@@ -1,14 +1,7 @@
 import 'package:dansk_app/prepare_practice.dart';
 import 'package:flutter/material.dart';
-/*
 
-void main() {
-  runApp(const MaterialApp(
-    title: 'Navigation Basics',
-    home: FirstRoute(),
-  ));
-}
- */
+
 void main() {
   runApp(const MaterialApp(
     home: MyApp(),

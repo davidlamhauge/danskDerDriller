@@ -5,7 +5,7 @@ const dobbeltkonsonantArray = [
   'Han er meget fattig.', 'Han er meget fatig.',
   'Der er huller i skoen.', 'Der er huler i skoen.',
   'Han ville hjem.', 'Han vile hjem.',
-  'Vi skulle mødes.', 'Vi skulle mødes.',
+  'Vi skulle mødes.', 'Vi skule mødes.',
   'Han maler et billede.', 'Han maler et bilede.',
   'Vi sidder ved bordet.', 'Vi sider ved bordet.',
   'Hunden tigger ved bordet.', 'Hunden tiger ved bordet.',

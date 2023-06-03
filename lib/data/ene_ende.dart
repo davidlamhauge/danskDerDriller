@@ -1,4 +1,4 @@
-const nutidsrArray = [
+const eneEndeArray = [
   // 10 jeg sætninger
   'Hun tænker meget.', 'Hun tænke meget.',
   'Jeg spiser en is.', 'Jeg spise en is.',
