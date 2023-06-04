@@ -1,18 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:dansk_app/prepare_practice.dart';
 
-class SubjectButton extends StatefulWidget {
+class SubjectButton extends StatelessWidget {
   const SubjectButton({Key? key, required this.subject, required this.txt})
       : super(key: key);
 
   final String subject;
   final String txt;
 
-  @override
-  State<SubjectButton> createState() => _SubjectButtonState();
-}
-
-class _SubjectButtonState extends State<SubjectButton> {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
@@ -26,11 +21,11 @@ class _SubjectButtonState extends State<SubjectButton> {
         Navigator.push(
           context,
           MaterialPageRoute(
-              builder: (context) => PreparePractice(subject: widget.subject)),
+              builder: (context) => PreparePractice(subject: subject)),
         );
       },
       child: Text(
-        widget.txt,
+        txt,
         style: const TextStyle(
           color: Colors.white,
           fontSize: 18,

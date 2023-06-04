@@ -1,13 +1,13 @@
-import 'package:dansk_app/data/ligge.dart';
 import 'package:flutter/material.dart';
 import 'package:dansk_app/practice_screen.dart';
 
 import 'package:dansk_app/data/nutidsr.dart';
 import 'package:dansk_app/data/dobbeltk.dart';
-import 'package:dansk_app/data/nogen.dart';
 import 'package:dansk_app/data/stumme.dart';
-import 'package:dansk_app/data/ad_af.dart';
+import 'package:dansk_app/data/ligge.dart';
 import 'package:dansk_app/data/ene_ende.dart';
+import 'package:dansk_app/data/ad_af.dart';
+import 'package:dansk_app/data/nogen.dart';
 
 class PreparePractice extends StatefulWidget {
   const PreparePractice({Key? key, required this.subject}) : super(key: key);
@@ -27,7 +27,7 @@ class _PreparePracticeState extends State<PreparePractice> {
       case 'ligge':     txt = 'Ligge eller Lægge ?'; break;
       case 'eneende':   txt = '-ene eller -ende ?'; break;
       case 'adaf':      txt = 'Ad eller Af ?'; break;
-      case 'nogen':      txt = 'Nogen eller nogle ?'; break;
+      case 'nogen':     txt = 'Nogen eller nogle ?'; break;
       default:          txt = 'Nutids-r ?'; break;
     }
     return txt;
