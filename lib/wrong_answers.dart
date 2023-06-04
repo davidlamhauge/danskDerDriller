@@ -34,7 +34,7 @@ class _WrongAnswersState extends State<WrongAnswers> {
         children: [
           ListTile(
             title: const Text(
-              'Ukorrekte svar:\n',
+              'Ukorrekt(-e) svar:\n',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 22,

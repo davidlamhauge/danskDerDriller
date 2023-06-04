@@ -7,6 +7,7 @@ import 'package:dansk_app/data/dobbeltk.dart';
 import 'package:dansk_app/data/nogen.dart';
 import 'package:dansk_app/data/stumme.dart';
 import 'package:dansk_app/data/ad_af.dart';
+import 'package:dansk_app/data/ene_ende.dart';
 
 class PreparePractice extends StatefulWidget {
   const PreparePractice({Key? key, required this.subject}) : super(key: key);
@@ -23,7 +24,6 @@ class _PreparePracticeState extends State<PreparePractice> {
       case 'nutidsr':   txt = 'Nutids-r ?'; break;
       case 'dobbeltk':  txt = 'Dobbeltkonsonant ?'; break;
       case 'stumme':    txt = 'Stumme bogstaver ?'; break;
-      case 'etellerto': txt = 'Et eller to ord ?'; break;
       case 'ligge':     txt = 'Ligge eller Lægge ?'; break;
       case 'eneende':   txt = '-ene eller -ende ?'; break;
       case 'adaf':      txt = 'Ad eller Af ?'; break;
@@ -39,10 +39,11 @@ class _PreparePracticeState extends State<PreparePractice> {
     switch (widget.subject) {
       case 'nutidsr'  : liste = nutidsrArray; break;
       case 'dobbeltk' : liste = dobbeltkonsonantArray; break;
-      case 'nogen'    : liste = nogenNogleArray; break;
       case 'stumme'   : liste = stummeArray; break;
-      case 'adaf'     : liste = adAfArray; break;
       case 'ligge'    : liste = liggeArray; break;
+      case 'eneende'  : liste = eneEndeArray; break;
+      case 'adaf'     : liste = adAfArray; break;
+      case 'nogen'    : liste = nogenNogleArray; break;
       default         : liste = nutidsrArray; break;
     }
     return liste;

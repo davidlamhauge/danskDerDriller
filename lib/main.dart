@@ -36,9 +36,9 @@ class MyApp extends StatelessWidget {
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(24),
+                    borderRadius: BorderRadius.circular(16),
                   ),
-                  minimumSize: const Size(300, 36),
+                  minimumSize: const Size(300, 32),
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -49,16 +49,16 @@ class MyApp extends StatelessWidget {
                 child: const Text('Nutids-R ?',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 20,
+                    fontSize: 18,
                   ),
                 ),
               ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(24),
+                      borderRadius: BorderRadius.circular(16),
                     ),
-                    minimumSize: const Size(300, 36),
+                    minimumSize: const Size(300, 32),
                   ),
                   onPressed: () {
                     Navigator.push(
@@ -69,16 +69,16 @@ class MyApp extends StatelessWidget {
                   child: const Text('Dobbeltkonsonant ?',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 20,
+                      fontSize: 18,
                     ),
                   ),
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(24),
+                      borderRadius: BorderRadius.circular(16),
                     ),
-                    minimumSize: const Size(300, 36),
+                    minimumSize: const Size(300, 32),
                   ),
                   onPressed: () {
                     Navigator.push(
@@ -89,36 +89,16 @@ class MyApp extends StatelessWidget {
                   child: const Text('Stumme bogstaver ?',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 20,
+                      fontSize: 18,
                     ),
                   ),
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(24),
+                      borderRadius: BorderRadius.circular(16),
                     ),
-                    minimumSize: const Size(300, 36),
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const PreparePractice(subject: 'etellerto')),
-                    );
-                  },
-                  child: const Text('Et eller to ord ?',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                    ),
-                  ),
-                ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(24),
-                    ),
-                    minimumSize: const Size(300, 36),
+                    minimumSize: const Size(300, 32),
                   ),
                   onPressed: () {
                     Navigator.push(
@@ -129,16 +109,16 @@ class MyApp extends StatelessWidget {
                   child: const Text('Ligge eller lægge ?',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 20,
+                      fontSize: 18,
                     ),
                   ),
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(24),
+                      borderRadius: BorderRadius.circular(16),
                     ),
-                    minimumSize: const Size(300, 36),
+                    minimumSize: const Size(300, 32),
                   ),
                   onPressed: () {
                     Navigator.push(
@@ -149,16 +129,16 @@ class MyApp extends StatelessWidget {
                   child: const Text('-ene eller -ende ?',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 20,
+                      fontSize: 18,
                     ),
                   ),
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(24),
+                      borderRadius: BorderRadius.circular(16),
                     ),
-                    minimumSize: const Size(300, 36),
+                    minimumSize: const Size(300, 32),
                   ),
                   onPressed: () {
                     Navigator.push(
@@ -169,16 +149,16 @@ class MyApp extends StatelessWidget {
                   child: const Text('Ad eller af ?',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 20,
+                      fontSize: 18,
                     ),
                   ),
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(24),
+                      borderRadius: BorderRadius.circular(16),
                     ),
-                    minimumSize: const Size(300, 36),
+                    minimumSize: const Size(300, 32),
                   ),
                   onPressed: () {
                     Navigator.push(
@@ -189,7 +169,7 @@ class MyApp extends StatelessWidget {
                   child: const Text('Nogen eller nogle ?',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 20,
+                      fontSize: 18,
                     ),
                   ),
                 ),
