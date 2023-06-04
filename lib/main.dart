@@ -1,4 +1,5 @@
 import 'package:dansk_app/prepare_practice.dart';
+import 'package:dansk_app/subject_button.dart';
 import 'package:flutter/material.dart';
 
 
@@ -32,147 +33,14 @@ class MyApp extends StatelessWidget {
               ),
             ),
             Column(
-              children: [
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  minimumSize: const Size(300, 32),
-                ),
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const PreparePractice(subject: 'nutidsr')),
-                  );
-                  },
-                child: const Text('Nutids-R ?',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                  ),
-                ),
-              ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                    minimumSize: const Size(300, 32),
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const PreparePractice(subject: 'dobbeltk')),
-                    );
-                  },
-                  child: const Text('Dobbeltkonsonant ?',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                    ),
-                  ),
-                ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                    minimumSize: const Size(300, 32),
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const PreparePractice(subject: 'stumme')),
-                    );
-                  },
-                  child: const Text('Stumme bogstaver ?',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                    ),
-                  ),
-                ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                    minimumSize: const Size(300, 32),
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const PreparePractice(subject: 'ligge')),
-                    );
-                  },
-                  child: const Text('Ligge eller lægge ?',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                    ),
-                  ),
-                ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                    minimumSize: const Size(300, 32),
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const PreparePractice(subject: 'eneende')),
-                    );
-                  },
-                  child: const Text('-ene eller -ende ?',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                    ),
-                  ),
-                ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                    minimumSize: const Size(300, 32),
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const PreparePractice(subject: 'adaf')),
-                    );
-                  },
-                  child: const Text('Ad eller af ?',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                    ),
-                  ),
-                ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                    minimumSize: const Size(300, 32),
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const PreparePractice(subject: 'nogen')),
-                    );
-                  },
-                  child: const Text('Nogen eller nogle ?',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                    ),
-                  ),
-                ),
+              children: const [
+                SubjectButton(subject: 'nutidsr',   txt: 'Nutids-R ?'),
+                SubjectButton(subject: 'dobbeltk',  txt: 'Dobbeltkonsonant ?'),
+                SubjectButton(subject: 'stumme',    txt: 'Stumme bogstaver ?'),
+                SubjectButton(subject: 'ligge',     txt: 'Ligge eller lægge ?'),
+                SubjectButton(subject: 'eneende',   txt: '-ene eller -ende ?'),
+                SubjectButton(subject: 'adaf',      txt: 'Ad eller af ?'),
+                SubjectButton(subject: 'nogen',     txt: 'Nogen eller nogle ?'),
               ],
             ),
             Image.asset(
