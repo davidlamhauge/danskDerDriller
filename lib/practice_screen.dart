@@ -1,15 +1,18 @@
 import 'dart:math';
 
+import 'package:dansk_app/show_hint.dart';
 import 'package:flutter/material.dart';
 import 'package:dansk_app/wrong_answers.dart';
 
 class SubjectScreen extends StatefulWidget {
   const SubjectScreen(
       {super.key,
+      required this.code,
       required this.subject,
       required this.questions,
       required this.numQuestions});
 
+  final String code; // subject code from prepare screen
   final String subject;
   final List<String> questions;
   final int numQuestions;
@@ -55,7 +58,7 @@ class _SubjectScreenState extends State<SubjectScreen> {
       }
     }
     int r = Random().nextInt(3);
-    for (int i = 0; i < r + 1; i++ ) {
+    for (int i = 0; i < r + 1; i++) {
       quizArray.shuffle();
     }
     return quizArray;
@@ -272,7 +275,9 @@ class _SubjectScreenState extends State<SubjectScreen> {
                       )
                     : ElevatedButton.icon(
                         onPressed: () {
-                          _justAnswered && _cont ? _getQuizStrings(quizNum) : null;
+                          _justAnswered && _cont
+                              ? _getQuizStrings(quizNum)
+                              : null;
                         },
                         icon: const Icon(
                           Icons.keyboard_double_arrow_right,
@@ -288,6 +293,21 @@ class _SubjectScreenState extends State<SubjectScreen> {
               ],
             ),
             const Spacer(),
+            Row(
+              children: [
+                const Spacer(),
+                FloatingActionButton(
+                  onPressed: () {
+                    showDialog(
+                        context: context,
+                        builder: (context) => getDialog(widget.code)
+                    );
+                  },
+                  backgroundColor: Colors.purple,
+                  child: const Icon(Icons.help),
+                ),
+              ],
+            ),
             Column(
               children: [
                 Image.asset(

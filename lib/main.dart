@@ -1,4 +1,3 @@
-import 'package:dansk_app/prepare_practice.dart';
 import 'package:dansk_app/subject_button.dart';
 import 'package:flutter/material.dart';
 

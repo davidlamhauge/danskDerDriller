@@ -21,14 +21,30 @@ class _PreparePracticeState extends State<PreparePractice> {
   String _getSubject() {
     String txt = '';
     switch (widget.subject) {
-      case 'nutidsr':   txt = 'Nutids-r ?'; break;
-      case 'dobbeltk':  txt = 'Dobbeltkonsonant ?'; break;
-      case 'stumme':    txt = 'Stumme bogstaver ?'; break;
-      case 'ligge':     txt = 'Ligge eller Lægge ?'; break;
-      case 'eneende':   txt = '-ene eller -ende ?'; break;
-      case 'adaf':      txt = 'Ad eller Af ?'; break;
-      case 'nogen':     txt = 'Nogen eller nogle ?'; break;
-      default:          txt = 'Nutids-r ?'; break;
+      case 'nutidsr':
+        txt = 'Nutids-r ?';
+        break;
+      case 'dobbeltk':
+        txt = 'Dobbeltkonsonant ?';
+        break;
+      case 'stumme':
+        txt = 'Stumme bogstaver ?';
+        break;
+      case 'ligge':
+        txt = 'Ligge eller Lægge ?';
+        break;
+      case 'eneende':
+        txt = '-ene eller -ende ?';
+        break;
+      case 'adaf':
+        txt = 'Ad eller Af ?';
+        break;
+      case 'nogen':
+        txt = 'Nogen eller nogle ?';
+        break;
+      default:
+        txt = 'Nutids-r ?';
+        break;
     }
     return txt;
   }
@@ -37,14 +53,30 @@ class _PreparePracticeState extends State<PreparePractice> {
 
   List<String> _getList() {
     switch (widget.subject) {
-      case 'nutidsr'  : liste = nutidsrArray; break;
-      case 'dobbeltk' : liste = dobbeltkonsonantArray; break;
-      case 'stumme'   : liste = stummeArray; break;
-      case 'ligge'    : liste = liggeArray; break;
-      case 'eneende'  : liste = eneEndeArray; break;
-      case 'adaf'     : liste = adAfArray; break;
-      case 'nogen'    : liste = nogenNogleArray; break;
-      default         : liste = nutidsrArray; break;
+      case 'nutidsr':
+        liste = nutidsrArray;
+        break;
+      case 'dobbeltk':
+        liste = dobbeltkonsonantArray;
+        break;
+      case 'stumme':
+        liste = stummeArray;
+        break;
+      case 'ligge':
+        liste = liggeArray;
+        break;
+      case 'eneende':
+        liste = eneEndeArray;
+        break;
+      case 'adaf':
+        liste = adAfArray;
+        break;
+      case 'nogen':
+        liste = nogenNogleArray;
+        break;
+      default:
+        liste = nutidsrArray;
+        break;
     }
     return liste;
   }
@@ -70,6 +102,7 @@ class _PreparePracticeState extends State<PreparePractice> {
                           context,
                           MaterialPageRoute(
                             builder: (context) => SubjectScreen(
+                                code: widget.subject,
                                 subject: _getSubject(),
                                 questions: liste,
                                 numQuestions: 10),
@@ -82,6 +115,7 @@ class _PreparePracticeState extends State<PreparePractice> {
                           context,
                           MaterialPageRoute(
                             builder: (context) => SubjectScreen(
+                                code: widget.subject,
                                 subject: _getSubject(),
                                 questions: liste,
                                 numQuestions: 20),
