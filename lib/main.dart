@@ -1,7 +1,6 @@
 import 'package:dansk_app/subject_button.dart';
 import 'package:flutter/material.dart';
 
-
 void main() {
   runApp(const MaterialApp(
     home: MyApp(),
@@ -10,7 +9,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
 
   @override
   Widget build(BuildContext context) {
@@ -33,13 +31,13 @@ class MyApp extends StatelessWidget {
             ),
             Column(
               children: const [
-                SubjectButton(subject: 'nutidsr',   txt: 'Nutids-R ?'),
-                SubjectButton(subject: 'dobbeltk',  txt: 'Dobbeltkonsonant ?'),
-                SubjectButton(subject: 'stumme',    txt: 'Stumme bogstaver ?'),
-                SubjectButton(subject: 'ligge',     txt: 'Ligge eller lægge ?'),
-                SubjectButton(subject: 'eneende',   txt: '-ene eller -ende ?'),
-                SubjectButton(subject: 'adaf',      txt: 'Ad eller af ?'),
-                SubjectButton(subject: 'nogen',     txt: 'Nogen eller nogle ?'),
+                SubjectButton(subject: 'nutidsr', txt: 'Nutids-R ?'),
+                SubjectButton(subject: 'dobbeltk', txt: 'Dobbeltkonsonant ?'),
+                SubjectButton(subject: 'stumme', txt: 'Stumme bogstaver ?'),
+                SubjectButton(subject: 'ligge', txt: 'Ligge eller lægge ?'),
+                SubjectButton(subject: 'eneende', txt: '-ene eller -ende ?'),
+                SubjectButton(subject: 'adaf', txt: 'Ad eller af ?'),
+                SubjectButton(subject: 'nogen', txt: 'Nogen eller nogle ?'),
               ],
             ),
             Image.asset(

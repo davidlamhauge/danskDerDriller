@@ -74,8 +74,8 @@ AlertDialog _getLigge(String subj) {
     title: Text('Regler for Ligge og Lægge:'),
     content: Text(
         'Man bruger \'lægge\' hvis det er en bevægelse:\n'
-            'Man bruger \'ligge\' hvis det er noget der ligger stille:\n\n'
             'Eksempel lægge (bevægelse):\nJeg lægger mig ned.\n\n'
+            'Man bruger \'ligge\' hvis det er noget der ligger stille:\n'
             'Eksempel ligge (stille):\nNu ligger jeg ned.\n\n'
             'Hint:\n'
             'Ønsker du en grammatisk forklaring, kan du få den på sproget.dk.\n\n'
@@ -120,7 +120,7 @@ AlertDialog _getNogen(String subj) {
             'Spørgsmål:\nEr der nogen hjemme?\n'
             'Betingede sætninger:\nHvis der er nogen hjemme, så...\n\n'
             'Nogle betyder \'et par\' eller andre udtryk for enkelte personer/ting.\n'
-        'De så nogle gamle film.\n\n'
+            'De så nogle gamle film.\n\n'
             'Hint:\n'
             'Nogen svarer til det engelske ord \'any\', og nogle svarer til \'some\'.\n\n'
             '(Tak til sproget.dk, mfl.)'),
