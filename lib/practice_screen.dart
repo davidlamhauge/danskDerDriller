@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:dansk_app/wrong_answers.dart';
 
@@ -19,10 +21,10 @@ class SubjectScreen extends StatefulWidget {
 class _SubjectScreenState extends State<SubjectScreen> {
   int yes = 0;
   int no = 0;
-  int questNum = 0; // number of strings read.
   int quizNum = 0; // number of quizzes taken
 
   bool _justAnswered = false;
+  bool _cont = true;
   bool _showNextButton = true;
   bool _set1Green = false;
   bool _set2Green = false;
@@ -52,7 +54,10 @@ class _SubjectScreenState extends State<SubjectScreen> {
         }
       }
     }
-    quizArray.shuffle();
+    int r = Random().nextInt(3);
+    for (int i = 0; i < r + 1; i++ ) {
+      quizArray.shuffle();
+    }
     return quizArray;
   }
 
@@ -110,7 +115,8 @@ class _SubjectScreenState extends State<SubjectScreen> {
     setState(() {
       nextButtonText = 'AFSLUT (pil øverst)';
       _showNextButton = false;
-      _justAnswered = false;
+      _justAnswered = true;
+      _cont = false;
     });
   }
 
@@ -266,7 +272,7 @@ class _SubjectScreenState extends State<SubjectScreen> {
                       )
                     : ElevatedButton.icon(
                         onPressed: () {
-                          _justAnswered ? _getQuizStrings(quizNum) : null;
+                          _justAnswered && _cont ? _getQuizStrings(quizNum) : null;
                         },
                         icon: const Icon(
                           Icons.keyboard_double_arrow_right,

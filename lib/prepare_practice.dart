@@ -88,20 +88,6 @@ class _PreparePracticeState extends State<PreparePractice> {
                           ));
                     },
                     child: const Text('20 opgaver')),
-                OutlinedButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => SubjectScreen(
-                                subject: _getSubject(),
-                                questions: liste,
-                                numQuestions: liste.length,
-                            ),
-                          ));
-
-                    },
-                    child: Text('${liste.length ~/ 2} opgaver')),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.pop(context);
