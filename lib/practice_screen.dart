@@ -306,10 +306,12 @@ class _SubjectScreenState extends State<SubjectScreen> {
                   backgroundColor: Colors.purple,
                   child: const Icon(Icons.help),
                 ),
+                const SizedBox(width: 10),
               ],
             ),
             Column(
               children: [
+                const SizedBox(height: 10),
                 Image.asset(
                   'assets/danskDerDriller.png',
                   fit: BoxFit.fitWidth,

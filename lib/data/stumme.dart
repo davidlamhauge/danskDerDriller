@@ -1,6 +1,6 @@
 const stummeArray = [
   // 10 jeg sætninger
-  'Den store vide verden.', 'Den store hvide verden..',
+  'Den store vide verden.', 'Den store hvide verden.',
   'Væggene var malet hvide.', 'Væggene var malet vide.',
   'Han ved hvor han er.', 'Han ved vor han er.',
   'Hun er en god kunde.', 'Hun er en god kunne.',
