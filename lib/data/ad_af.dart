@@ -1,5 +1,4 @@
 const adAfArray = [
-  // 10
   'De kælkede ned ad bakken.', 'De kælkede ned af bakken.',
   'Jeg tager gryden af komfuret.', 'Jeg tager gryden ad komfuret.',
   'Jeg tog mønten op af lommen.', 'Jeg tog mønten op ad lommen.',
@@ -10,7 +9,6 @@ const adAfArray = [
   'Vi gik ud ad døren.', 'Vi gik ud af døren.',
   'Han stirrer ud af vinduet.', 'Han stirrer ud ad vinduet.',
   'Jeg griner af ham.', 'Jeg griner ad ham.',
-  // 10
   'Han kravler ind ad vinduet.', 'Han kravler ind af vinduet.',
   'Han gik ud af toget.', 'Han gik ud ad toget.',
   'Vi gik hen ad vejen.', 'Vi gik hen af vejen.',
@@ -21,6 +19,9 @@ const adAfArray = [
   'Han gik hen ad stien.', 'Han gik hen af stien.',
   'Hun er ude af sig selv.', 'Hun er ude ad sig selv.',
   'Den faldt ned af bordet.', 'Den faldt ned ad bordet.',
-  // x
-  'Hunden kom op af vandet.', 'Hunden kom op ad vandet.',
+  'Jeg er træt af suppe.', 'Jeg er træt ad suppe.',
+  'Hunden snerrer ad naboerne.', 'Hunden snerrer af naboerne.',
+  'Han snerrer af arrighed.', 'Han snerrer ad arrighed.',
+  'Jeg måtte skille dem ad.', 'Jeg måtte skille dem af.',
+  'Hun faldt om af træthed.', 'Hun faldt om ad træthed.',
 ];
