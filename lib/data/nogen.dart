@@ -1,5 +1,4 @@
 const nogenNogleArray = [
-  // 10 jeg sætninger
   'Der var ikke nogen hjemme.', 'Der var ikke nogle hjemme.',
   'Vi har nogle katte.', 'Vi har nogen katte.',
   'Vi spiste nogle kager.', 'Vi spiste nogen kager.',
@@ -10,7 +9,6 @@ const nogenNogleArray = [
   'Der er nogle folk i stuen.', 'Der er nogen folk i stuen.',
   'Der er ikke nogen i stuen.', 'Der er ikke nogle i stuen.',
   'Nogle fra klassen mødes.', 'Nogen fra klassen mødes.',
-  // 10 at sætninger
   'Det er nogle stærke fyre.', 'Det er nogen stærke fyre.',
   'Vi så ikke nogen.', 'Vi så ikke nogle.',
   'Det koster nogle kroner.', 'Det koster nogen kroner.',
@@ -21,7 +19,20 @@ const nogenNogleArray = [
   'Jeg fik nogle oplevelser.', 'Jeg fik nogen oplevelser.',
   'Jeg spiser nogle piller.', 'Jeg spiser nogen piller.',
   'Jeg kender nogle musikere.', 'Jeg kender nogen musikere.',
-  // x antal lidt sværere sætninger
   'Vi får nogle håndmadder.', 'Vi får nogen håndmadder.',
   'Nogen må snakke med ham!', 'Nogle må snakke med ham!',
+  'Der er ikke nogen undskyldning.', 'Der er ikke nogle undskyldning.',
+  'Vi bliver nogle dage.', 'Vi bliver nogen dage.',
+  'Der var nogen i baghaven.', 'Der var nogle i baghaven.',
+  'Skal vi se nogle film?', 'Skal vi se nogen film?',
+  'Der lå nogle penge på bordet.', 'Der lå nogen penge på bordet.',
+  'De kørte nogle lange ture.', 'De kørte nogen lange ture.',
+  'Vi får nogle håndmadder.', 'Vi får nogen håndmadder.',
+  'Hører du nogen le?', 'Hører du nogle le?',
+  'Nogen har været her forbi.', 'Nogle har været her forbi.',
+  'Jeg fik nogle på frakken.', 'Jeg fik nogen på frakken.',
+  'Det er nogle uger siden.', 'Det er nogen uger siden.',
+  'Det sker nogle gange.', 'Det sker nogen gange.',
+  'Så du nogen derinde?', 'Så du nogle derinde?',
+  'Vi havde nogle dejlige dage.', 'Vi havde nogen dejlige dage.',
 ];

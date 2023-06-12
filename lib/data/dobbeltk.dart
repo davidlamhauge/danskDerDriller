@@ -1,5 +1,4 @@
 const dobbeltkonsonantArray = [
-  // 10 jeg sætninger
   'Solen skinner.', 'Solen skinder.',
   'De er forskellige.', 'De er forskelige.',
   'Han er meget fattig.', 'Han er meget fatig.',
@@ -10,9 +9,9 @@ const dobbeltkonsonantArray = [
   'Vi sidder ved bordet.', 'Vi sider ved bordet.',
   'Hunden tigger ved bordet.', 'Hunden tiger ved bordet.',
   'Bogen ligger på sengen.', 'Bogen liger på sengen.',
-  // 10 at sætninger
   'Jeg lægger mig ned.', 'Jeg læger mig ned.',
   'Vi kører i bilen.', 'Vi kører i billen.',
+  'Billen spiser blade.', 'Bilen spiser blade.',
   'Du skal lægge bogen der.', 'Du skal læge bogen der.',
   'Vi kører lige hjem.', 'Vi kører ligge hjem.',
   'En masse penge.', 'En mase penge.',
@@ -21,6 +20,5 @@ const dobbeltkonsonantArray = [
   'En side i bogen.', 'En sidde i bogen.',
   'Jeg spiser en pille.', 'Jeg spiser en pile.',
   'Vil du give mig koppen?', 'Vil du give mig kopen?',
-  // x antal lidt sværere sætninger
   'Vi står i en række.', 'Vi står i en ræke.',
 ];

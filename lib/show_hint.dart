@@ -74,9 +74,9 @@ AlertDialog _getLigge(String subj) {
     title: Text('Regler for Ligge og Lægge:'),
     content: Text(
         'Man bruger \'lægge\' hvis det er en bevægelse:\n'
-            'Eksempel lægge (bevægelse):\nJeg lægger mig ned.\n\n'
+            'Eksempel (bevægelse):\nJeg lægger mig ned.\n\n'
             'Man bruger \'ligge\' hvis det er noget der ligger stille:\n'
-            'Eksempel ligge (stille):\nNu ligger jeg ned.\n\n'
+            'Eksempel (stille):\nNu ligger jeg ned.\n\n'
             'Hint:\n'
             'Ønsker du en grammatisk forklaring, kan du få den på sproget.dk.\n\n'
             '(Tak til sproget.dk, mfl.)'),
@@ -113,7 +113,7 @@ AlertDialog _getAdAf(String subj) {
 
 AlertDialog _getNogen(String subj) {
   return const AlertDialog(
-    title: Text('Regler for Nogen og Nogle:'),
+    title: Text('Regler Nogen og Nogle:'),
     content: Text(
         'Nogen betyder \'Nogen som helst\' og bruges især i:\n'
             'Nægtende sætninger:\nDe fandt ikke nogen hjemme.\n'

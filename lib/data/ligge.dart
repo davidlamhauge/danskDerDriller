@@ -1,5 +1,4 @@
 const liggeArray = [
-  // 10
   'Hun lægger sig ned.', 'Hun ligger sig ned.',
   'Bogen ligger på bordet.', 'Bogen lægger på bordet.',
   'Vi lægger kræfterne i.', 'Vi ligger kræfterne i.',
@@ -10,8 +9,6 @@ const liggeArray = [
   'Du skal ligge helt stille.', 'Du skal lægge helt stille.',
   'Han lagde blyanten fra sig.', 'Han lå blyanten fra sig.',
   'Hun lå der længe.', 'Hun lagde der længe.',
-  // 10
-  'Jeg lægger kræfterne i.', 'Jeg ligger kræfterne i.',
   'Druerne ligger i skålen.', 'Druerne lægger i skålen.',
   'Vi har lagt planer', 'Vi har ligget planer.',
   'Det hele ligger stille.', 'Det hele lægger stille.',
@@ -21,6 +18,16 @@ const liggeArray = [
   'Nu lægger vi det fra os.', 'Nu ligger vi det fra os.',
   'Jeg har lagt planer.', 'Jeg har ligget planer.',
   'Har du lagt den der?', 'Har du ligget den der?',
-  // x
   'Jeg vil ligge lidt.', 'Jeg vil lægge lidt.',
+  'Jeg har lagt pengene tilbage.', 'Jeg har ligget pengene tilbage.',
+  'Han har ligget på sofaen.', 'Han har lagt på sofaen.',
+  'Vil du lægge blyanten fra dig?', 'Vil du ligge blyanten fra dig?',
+  'Vi lægger tøjet på stolen.', 'Vi ligger tøjet på stolen.',
+  'Man skal lægge penge til side.', 'Man skal ligge penge til side.',
+  'Jeg lægger sjælen i det.', 'Jeg ligger sjælen i det.',
+  'Jeg lagde to kroner på bordet.', 'Jeg lå to kroner på bordet.',
+  'Vi lå tæt i teltet.', 'Vi lagde tæt i teltet.',
+  'En høne kan lægge æg.', 'En høne kan ligge æg.',
+  'Vi er nødt til at lægge planer.', 'Vi er nødt til at ligge planer.',
+  'Jeg har lagt planer for dagen.', 'Jeg har ligget planer for dagen.',
 ];
