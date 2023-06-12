@@ -57,8 +57,9 @@ class _SubjectScreenState extends State<SubjectScreen> {
         }
       }
     }
+    // shuffle array 3-5 times
     int r = Random().nextInt(3);
-    for (int i = 0; i < r + 1; i++) {
+    for (int i = 0; i < r + 3; i++) {
       quizArray.shuffle();
     }
     return quizArray;

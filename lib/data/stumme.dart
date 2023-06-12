@@ -1,5 +1,4 @@
 const stummeArray = [
-  // 10 jeg sætninger
   'Den store vide verden.', 'Den store hvide verden.',
   'Væggene var malet hvide.', 'Væggene var malet vide.',
   'Han ved hvor han er.', 'Han ved vor han er.',
@@ -10,7 +9,6 @@ const stummeArray = [
   'Det har han aldrig gjort.', 'Det har han aldrig gjordt.',
   'Han havde ingen penge.', 'Han hade ingen penge.',
   'Det var meget koldt.', 'Det var meget kolt.',
-  // 10 at sætninger
   'De ville i skole.', 'De vilde i skole.',
   'De kunne ikke finde ham.', 'De kunde ikke finde ham.',
   'De spiser silden.', 'De spiser sillen.',
@@ -21,6 +19,17 @@ const stummeArray = [
   'De kom til bunds i opgaverne.', 'De kom til buns i opgaverne.',
   'Jeg skal vande blomster.', 'Jeg skal vanne blomster.',
   'Vi skal vinde i morgen!', 'Vi skal vinne i morgen!',
-  // x antal lidt sværere sætninger
   'Hun hvisker til ham.', 'Hun visker til ham.',
+  'Vinden var kold.', 'Vinnen var kold.',
+  'Det vilde vesten.', 'Det ville vesten.',
+  'De sejlede på fjorden.', 'De sejlede på fjoren.',
+  'Det var et godt gilde.', 'Det var et godt gille.',
+  'Vil du hjælpe mig?', 'Vil du jælpe mig?',
+  'Han lagde sig ned.', 'Han lage sig ned.',
+  'Det kunne ikke finde det.', 'Det kunne ikke finne det.',
+  'Det gjorde ikke noget.', 'Det gjore ikke noget.',
+  'De kunne ikke vente.', 'De kunde ikke vente.',
+  'Jeg tænder bålet.', 'Jeg tænner bålet.',
+  'Kulden kom krybende.', 'Kullen kom krybende.',
+  'Jeg ved ikke hvor det er.', 'Jeg ved ikke vor det er.',
 ];
