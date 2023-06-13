@@ -52,4 +52,6 @@ const dobbeltkonsonantArray = [
   'Det var en værre historie.', 'Det var en være historie.',
   'De skal bygge et nyt hus.', 'De skal byge et nyt hus.',
   'Der kom en voldsom byge.', 'Der kom en voldsom bygge.',
+  'Det var et værre søle.', 'Det var et værre sølle.',
+  'Det var nogle sølle madder.', 'Det var nogle søle madder.',
 ];
