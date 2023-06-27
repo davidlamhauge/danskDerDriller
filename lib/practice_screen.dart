@@ -295,8 +295,25 @@ class _SubjectScreenState extends State<SubjectScreen> {
             ),
             const Spacer(),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                const Spacer(),
+                ElevatedButton(
+                  onPressed: () {
+                    showAboutDialog(
+                      context: context,
+                      applicationName: 'Dansk der Driller',
+                      applicationVersion: 'Version: 1.0.0',
+                      children: [
+                        const Text('"Husk at -\nMan driller kun dem\nman kan lide..."'),
+                        const Text(
+                          '\nDavid Lamhauge',
+                          textAlign: TextAlign.right,
+                        ),
+                      ],
+                    );
+                  },
+                  child: const Icon(Icons.info_outlined),
+                ),
                 FloatingActionButton(
                   onPressed: () {
                     showDialog(
