@@ -295,7 +295,7 @@ class _SubjectScreenState extends State<SubjectScreen> {
             ),
             const Spacer(),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 ElevatedButton(
                   onPressed: () {
@@ -304,7 +304,7 @@ class _SubjectScreenState extends State<SubjectScreen> {
                       applicationName: 'Dansk der Driller',
                       applicationVersion: 'Version: 1.0.0',
                       children: [
-                        const Text('"Husk at -\nMan driller kun dem\nman kan lide..."'),
+                        const Text('"Husk at man kun driller\ndem man kan lide..."'),
                         const Text(
                           '\nDavid Lamhauge',
                           textAlign: TextAlign.right,
@@ -324,7 +324,6 @@ class _SubjectScreenState extends State<SubjectScreen> {
                   backgroundColor: Colors.purple,
                   child: const Icon(Icons.help),
                 ),
-                const SizedBox(width: 10),
               ],
             ),
             Column(
